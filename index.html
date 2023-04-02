@@ -11,17 +11,19 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-
+   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+ 
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="vendor/animate.css/animate.min.css" rel="stylesheet" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
@@ -36,7 +38,142 @@
 </head>
 
 <body>
- 
+
+
+    <div class="modal" data-modal>
+
+        <div class="modal-close-overlay" data-modal-overlay></div>
+    
+        <div class="modal-content">
+    
+          <button class="modal-close-btn" data-modal-close>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+    
+          <div class="newsletter-img">
+            <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
+          </div>
+    
+          <div class="newsletter">
+    
+            <form action="#">
+    
+              <div class="newsletter-header">
+    
+                <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+    
+                <p class="newsletter-desc">
+                  Subscribe the <b>FityFy</b> to get latest products and discount update.
+                </p>
+    
+              </div>
+    
+              <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+    
+              <!-- <button type="submit" class="btn-newsletter">Subscribe</button>
+            bu -->
+            <button type="submit" style="background-color: rgb(18, 109, 183); border-radius: 30px; color: white;padding: 3px 4px 5px 4px;">Subscribe</button>
+    
+            </form>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- chatbot part -->
+
+
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                    <!-- <i class="fa-sharp fa-regular fa-paper-plane-top"></i> -->
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- header part -->
 
@@ -62,6 +199,9 @@
                 
             <a href="https://delightful-centaur-1806a6.netlify.app/" class="appointment-btn scrollto"><sp class="d-none d-md-inline"> 
                 DashBoard</a>
+               <span style="margin-left: 15px;"><a href="https://swatisukla03.github.io/FityFyFAQ/">FAQ</a> </span> 
+
+                      <a href="FityFyStore/index.html" style="margin-left:8px;">Store</a>
         </div>
     </header>
 
@@ -74,7 +214,7 @@
 
      
 
-    <!---------------------------------------- home section -->
+    <!---------------------------------------- home section--------------------------------------------------------------------- -->
 
     <section id="home" class="d-flex align-items-center">
         <div class="container">
@@ -179,21 +319,26 @@
 
         <section id="about" class="about reveal active">
             <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus numquam dolorem illo voluptates
-                        dolor perferendis incidunt, repellendus illum nam ipsa ab, totam dolorum alias ratione sunt quis
-                        voluptas cupiditate veniam.</p>
-
+     
+                <div class="testimonial-heading">
+                    
+                    <h1>About Us </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem libero unde! Veritatis minus delectus numquam ipsum mollitia sit animi sequi labore illo, est accusamus aliquam minima ab nihil. Eos.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio, vitae deleniti quidem quasi possimus itaque consequuntur aspernatur sapiente nesciunt doloremque. Quaerat nam tempora perferendis quos sequi ipsum laborum architecto!</p>
+    
+    
+    
+    
+    
+    
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative"><a href="" class="glightbox play-btn mb-4"></a> </div>
+                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative"><a href="https://youtu.be/rkj7w-aVQwo" class="glightbox play-btn mb-4"></a> </div>
 
                     <div class="col-xl-7 col-lg-6 icon-box d-flex  flex-column justify-content-center align-items-stretch py-4 px-lg-5">
                         <div class="icon-box">
 
-                            <div class="icon"><i class="bx bx-heart"></i></div>
+                            <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
                             <h4 class="title"> <a href="">Health is Wealth</a></h4>
                             <p class="description"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
                                 ipsa alias sed sunt nemo, quaerat fuga doloribus. Voluptatem pariatur repellendus vel
@@ -201,8 +346,9 @@
                         </div>
 
                         <div class="icon-box">
+ 
 
-                            <div class="icon"><i class="fa-regular fa-light-emergency-on"></i></div>
+                            <div class="icon"><i class="fa-sharp fa-solid fa-star-of-life"></i></div>
                             <h4 class="title"> <a href="">Emergency</a></h4>
                             <p class="description"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
                                 ipsa alias sed sunt nemo, quaerat fuga doloribus. Voluptatem pariatur repellendus vel
@@ -211,7 +357,7 @@
 
                         <div class="icon-box">
 
-                            <div class="icon"><i class="bx bx-help-circle"></i></div>
+                            <div class="icon"><i class="fa-solid fa-question"></i></div>
                             <h4 class="title"> <a href="">SERVICES</a></h4>
                             <p class="description"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
                                 ipsa alias sed sunt nemo, quaerat fuga doloribus. Voluptatem pariatur repellendus vel
@@ -228,6 +374,7 @@
 
         </section>
 
+    
 
 
 
@@ -243,7 +390,7 @@
 
                             <i class="fas fa-user-md"></i>
                             <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Doctors</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
+                            <p><strong>Doctors</strong> this is the  of 3 times of the new research of the genetics and medicos</p>
                             <a href="#">Find Out More  &raquo;</a>
                         </div>
 
@@ -256,7 +403,7 @@
 
                             <i class="fas fa-hospital"></i>
                             <span data-purecounter-start="0" data-purecounter-end="55" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Doctors</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
+                            <p><strong>Department</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
                             <a href="#">Find Out More &raquo;</a>
                         </div>
 
@@ -270,7 +417,7 @@
 
                             <i class="fas fa-flask"></i>
                             <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Doctors</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
+                            <p><strong>Research</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
                             <a href="#">Find Out More &raquo;</a>
                         </div>
 
@@ -285,7 +432,7 @@
 
                             <i class="fas fa-award"></i>
                             <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Doctors</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
+                            <p><strong>Awards</strong> thisis the dyt og 3times of the nrw research of the genetics msd dfrt,uio</p>
                             <a href="#">Find Out More &raquo;</a>
                         </div>
 
@@ -298,25 +445,7 @@
 
 
         </section>
-
-        <!-- <div class="wrapper">
-            <div class="container">
-
-                <i class="fa-solid fa-hospital"></i>
-                <span class="num" data-val="400">000</span>
-                <span class="text"></span>
-            </div>
-
-
-
-
-        </div> -->
-
-        
-
-         
-
-
+ 
         <!-- post section -->
 
 
@@ -434,25 +563,279 @@
 
         </section>
 
+
+
+
+
+
+        <section id="testimonials">
+
+
+            <!-- heading -->
+
+
+            <div class="testimonial-heading">
+                <span>Comments</span>
+                <h1>Patients Says</h1>
+
+            </div>
+
+
+            <!-- ?testimonial bocx container -->
+            <div class="components"> 
+            <div class="testimonial-box-container">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Swati Sukla</strong>
+                                <span>@swati03</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Asish Goel</strong>
+                                <span>@asishGoel01</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Tarun Sharma</strong>
+                                <span>@sharmatARUN@</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Shaurya Sinha</strong>
+                                <span>@sinhaShaurya</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Nancy</strong>
+                                <span>@nancy123</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="name-user">
+                                <strong>Avinash Yadav</strong>
+                                <span>@avinashYadav</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- reviews -->
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis illo quo reiciendis iste placeat itaque, maxime cumque assumenda quidem illum? Qui nesciunt, nisi voluptate ducimus doloribus impedit eaque laboriosam.</p>
+
+                    </div>
+                </div>
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
  
         <!--  Services ?section  -->
         <section id="services" class="services">
             <div class="container">
 
-
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora cum quis accusamus eos expedita dolore, corrupti aut. Quis ad aut dicta quibusdam sint, minima numquam cumque error tempora quo! Eos.</p>
-
+                <div class="testimonial-heading">
+                    
+                    <h1>Why FityFy</h1>
                 </div>
 
+ 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fas fa-heartbeat"></i> </div>
-                                <h4><a href="">Regular Checkup</a></h4>
+                                <h4><a href="https://ashish3281-prediction-multiple-diseases-diyfro.streamlit.app/">Check by Yourself</a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
@@ -462,14 +845,15 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
 
-
+                           <a href="counter/index.html"> 
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fas fa-pills"></i> </div>
-                                <h4><a href="">Medicine</a></h4>
+                                <h4><a href="counter/index.html">Daily-Users</a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
+                        </a>
 
                     </div>
 
@@ -482,7 +866,7 @@
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fas fa-wheelchair"></i> </div>
-                                <h4><a href="">Disabled Person</a></h4>
+                                <h4><a href="https://video-jsxp.onrender.com/3f73dea5-9d7e-4e9b-809b-0a5798cbe739">Video Call</a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
@@ -494,7 +878,7 @@
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fa-solid fa-notes-medical"></i> </div>
-                                <h4><a href="">Health Post</a></h4>
+                                <h4><a href="https://ashish3281-medical-insurance-cost-pr-insurance-predictor-b33hxe.streamlit.app/"> Insurance Cost Prediction</a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
@@ -508,7 +892,7 @@
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fa-solid fa-heart-pulse"></i></div>
-                                <h4><a href="">Regular Checkup</a></h4>
+                                <h4><a href="https://incredible-manatee-bce020.netlify.app/">Read Prescription By Yourself</a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
@@ -520,7 +904,7 @@
                         <div class="icon-box">
                             <div class="icon">
                                 <i class="fas fa-heartbeat"></i> </div>
-                                <h4><a href="">Regular Checkup</a></h4>
+                                <h4><a href="FityFyStore/index.html">FityFy Medicos </a></h4>
                                 <p>This is the new query to be resolved in the outer periphery of the decide of the decline.</p>
 
                             </div>
@@ -543,10 +927,16 @@
 
 
 
-                <div class="section-title">
-                    <h2>Make an Appointment</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nostrum incidunt necessitatibus iste, nihil quos dignissimos aliquid quam tempore ut possimus veritatis iusto libero tempora similique cum rerum quasi laborum.
-                    </p>
+                <div class="testimonial-heading">
+                    
+                    <h1>Appointment</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem libero unde! Veritatis minus delectus numquam ipsum mollitia sit animi sequi labore illo, est accusamus aliquam minima ab nihil. Eos.</p>
+    
+    
+    
+    
+    
+    
                 </div>
 
 
@@ -627,22 +1017,22 @@
             <div class="container">
 
 
-                <div class="section-title">
-
-
-                    <h2>Doctors</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae non tenetur, perferendis tempore vel voluptate. In, ducimus. Officiis aspernatur minima nostrum, commodi rem ab sequi? Amet tempore sed velit quis?</p>
+                <div class="testimonial-heading">
+                    
+                    <h1> FityFy Doctors</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem libero unde! Veritatis minus delectus numquam ipsum mollitia sit animi sequi labore illo, est accusamus aliquam minima ab nihil. Eos.</p>
+    
                 </div>
 
 
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 ">
                     <div class="member d-flex align-items-start">
-                        <div><img src="img/doctors/1.png" alt="" class="img-fluid"></div>
+                        <div class="pic"><img src="img/doctors/1.png" alt="" class="img-fluid"></div>
                         <div class="member-info">
-                            <h4>Rozen Sukla</h4>
+                            <h4>Richa Sukla</h4>
                             <span>Chief Medical Officer</span>
-                            <p>Sit in th e 3 times more higher and popular deadlock to the reasonance.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus voluptatem, aperiam quidem sapiente eius quis modi saepe voluptas, ullam repellendus sit earum, enim eligendi. Cum reprehenderit voluptatum consequatur explicabo laborum..</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
                                 <a href=""><i class="ri-facebook-fill"></i></a>
@@ -651,16 +1041,13 @@
 
                             </div>
                         </div>
-
-
-
                     </div>
                   </div>
 
 
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="member d-flex align-items-start">
-                        <div><img src="img/doctors/2.jpg" alt="" class="img-fluid"></div>
+                        <div class="pic"><img src="img/doctors/2.jpg" alt="" class="img-fluid"></div>
                         <div class="member-info">
                             <h4>Pratikshya Rai</h4>
                             <span>Anesthesiologist</span>
@@ -681,9 +1068,9 @@
 
 
 
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div><img src="img/doctors/3.jpg" alt="" class="img-fluid"></div>
+                        <div class="pic"><img src="img/doctors/3.jpg" alt="" class="img-fluid"></div>
                         <div class="member-info">
                             <h4>Rozen Chitrakar</h4>
                             <span>Cardiologist</span>
@@ -704,7 +1091,7 @@
 
                   <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
-                        <div><img src="img/doctors/4.jpg" alt="" class="img-fluid"></div>
+                        <div class="pic"><img src="img/doctors/4.jpg" alt="" class="img-fluid"></div>
                         <div class="member-info">
                             <h4>Lauren Jones</h4>
                             <span>Neurologist</span>
@@ -745,12 +1132,16 @@
             <div class="container">
 
 
-
-                <div class="section-title">
-                    <h2>Upload Your Report</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nostrum incidunt necessitatibus iste, nihil quos dignissimos aliquid quam tempore ut possimus veritatis iusto libero tempora similique cum rerum quasi laborum.
-                    </p>
+                <div class="testimonial-heading">
                     
+                    <h1>Upload Reports</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem libero unde! Veritatis minus delectus numquam ipsum mollitia sit animi sequi labore illo, est accusamus aliquam minima ab nihil. Eos.</p>
+    
+    
+    
+    
+    
+    
                 </div>
 
 
@@ -837,14 +1228,14 @@
 
 
 
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur iusto impedit sapiente laudantium dignissimos tempora aperiam repellat, nam sit? Aliquam est nulla, nam eius totam voluptates repellat odit fugit id!</p>
-
+                <div class="testimonial-heading">
+                    
+                    <h1>Contact Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem libero unde! Veritatis minus delectus numquam ipsum mollitia sit animi sequi labore illo, est accusamus aliquam minima ab nihil. Eos.</p>
                 </div>
 
 
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas" src="https://maps.google.com/maps?q=aiims&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:900px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div>
+                <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=aiims&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:900px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div> -->
 
                 <div class="container">
                     <div class="row mt-5">
@@ -880,7 +1271,7 @@
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
                                     </div>
 
-                                </div>
+                                
 
 
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -900,7 +1291,12 @@
 
                                 </div>
 
-                                <div class="text-center"><button type="submit">Send Message</button></div>
+                                <div class="text-center">
+ 
+                                    <button type="submit"
+                                     style="color: #fff;">   
+                                    <a href="https://ashish3281.github.io/Contact-Me/" style="color: #fff;"> Contact Us..  </a></button></div>
+                                
 
 
                             </form>
@@ -922,131 +1318,10 @@
 
 
 
-    <!-- infinite scrollbar -->
-
-
-    
+     
 
 
 
-
-
-
-    <!-- footer section -->
-
-    <!-- <footer id="footer">
-        <div class="footer-tag">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-info">
-                            <h3>FityFy</h3>
-                            <p>KIST HOSPITAL ROAD <br>
-                            44700 KTM,INDIA 
-                            <strong>Phone :</strong>+1 53454 2344 55<br>
-                            <strong>Email : </strong>FityFy@example.com<br>
-                        </p>
-
-
-                        <div class="social-links mt-3">
-                            <a href="#"><i class="bx bx1-facebook"></i></a>
-                            <a href="#"><i class="bx bx1-instagram"></i></a>
-                            <a href="#"><i class="bx bx1-twitter"></i></a>
-                            <a href="#"><i class="bx bx1-skype"></i></a>
-                            <a href="#"><i class="bx bx1-linkedin"></i></a>
-                        </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-
-                        <ul>
-
-                            <li><i class="bx bx-chevron-right"><a href="#">Home</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#about">about</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#services">Services</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#doctor">Doctor</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#contact">Contact</a></i></li>
-                        </ul>
-
-
-
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-
-                            <li><i class="bx bx-chevron-right"><a href="#">Web Design</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#">Web Developing</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#">Web Tutorial</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#">Marketing</a></i></li>
-                            <li><i class="bx bx-chevron-right"><a href="#">Graphic Designing</a></i></li>
-                        </ul>
-
-
-                    </div>
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, debitis eaque. Unde quo quis deserunt alias veritatis optio consequatur cupiditate ullam voluptatum rerum!  </p>
-                        <form action=""  method="POST">
-                             <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="container">
-
-
-            <div class="copyright">
-
-                &copy;Copyright <strong><span>FityFy</span></strong>.All Right Reserved.
-
-
-            </div>
-
-            <div class="credits">
-                Designed by <a href="#"></a>
-            </div>
-        </div>
-
-
-
-
-
-    </footer> -->
-
-
-
-
-    <!-- <footer>
-
-       <div class="row">
-        <div class="col">
-            <img src="" alt=""  class="logo">
-            <p>Subscribe the new Hospital facility to the new venture of the premium exhibition.</p>
-        </div>
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
-        <div class="col">
-            
-        </div>
-
-
-
-       </div>
-    </footer> -->
 
 
 
@@ -1137,6 +1412,92 @@
     </div>
 
 
+    <footer class="footer">
+        <div class="left-area">
+            <h2>Contact</h2>
+
+            <ul class="box">
+                <li>l32,Sidecup Lane</li>
+                <li>PS15 MA12,Bromley</li>
+                <li>London ,UK</li>
+                <li>www.yourwebsite.com</li>
+                <li>000 123 456 7890</li>
+            </ul>
+        </div>
+
+
+        <ul class="right-area">
+            <li class="link-area">
+                <h2>Useful Link</h2>
+                <ul class="box h-box">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tickets</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Recent Post</h2>
+                <ul class="box">
+                    <li><a href="#">lorem in this the discussion  </a></li>
+                    <li><a href="#">lorem in this the discussion  </a></li>
+                    <li><a href="#">lorem in this the discussion  </a></li>
+                    <li><a href="#">lorem in this the discussion  </a></li>
+                    <li><a href="#">lorem in this the discussion  </a></li>
+
+                </ul>
+            </li>
+
+
+            <li>
+                <h2>Newsletter</h2>
+                <form action="" class="form-search">
+                    <div class="search-box">
+                        <input type="text" name="" id="">
+                        <button class="btn" type="submit">Search</button>
+                    </div>
+                </form>
+
+
+                <div class="socials">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-dribble"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-tumblr"></i></a>
+                </div>
+
+            </li>
+        </ul>
+
+
+        <div class="footer-bottom">
+            <img src="" alt="">
+            <p>All Rights reserved by &copy;creative 2023</p>
+        </div>
+
+     
+
+
+
+
+
+
+
+
+
+
+
+    </footer>
+
+
+
+   
+
+
 
 
     <!-- Vendor JS Files -->
@@ -1147,13 +1508,22 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Template Main JS File -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+
+    
+    <script src="static/scripts/responses.js"></script>
+    <script src="static/scripts/chat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
     <script type="text/javascript">
@@ -1187,6 +1557,9 @@
 
 
     </script>
+
+
+ 
 </body>
 
 </html>
